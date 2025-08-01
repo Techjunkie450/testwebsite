@@ -82,13 +82,15 @@ const Services = () => {
                 key={index}
                 className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-emerald-200 hover:-translate-y-2 hover:shadow-emerald-500/10"
               >
+                <div
                   className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-6 text-center border border-blue-100 hover:border-blue-200 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+                >
                 <div className="mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="text-white" size={24} />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
-                  <div className="text-sm font-semibold text-blue-600 mb-1">{stat.label}</div>
+                    {service.title}
                   </h3>
                 </div>
                 
@@ -104,9 +106,10 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                </div>
               </div>
             );
-                <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+          })}
         </div>
 
         <div className="text-center mt-16">
