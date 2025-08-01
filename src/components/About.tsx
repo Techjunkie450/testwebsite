@@ -35,7 +35,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Infrarise Technologies</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-orange-600">Infrarise Technologies</span>
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -52,19 +52,19 @@ const About = () => {
 
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
                 <span className="text-gray-700 font-medium">Expert team with proven track record</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
                 <span className="text-gray-700 font-medium">Customized solutions for every business</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
                 <span className="text-gray-700 font-medium">24/7 support and maintenance</span>
@@ -78,13 +78,13 @@ const About = () => {
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 text-center border border-purple-100 hover:border-purple-200 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
+                  className="bg-gradient-to-br from-emerald-50 to-orange-50 rounded-xl p-6 text-center border border-emerald-100 hover:border-emerald-200 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/10"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="text-white" size={24} />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
-                  <div className="text-sm font-semibold text-purple-600 mb-1">{stat.label}</div>
+                  <div className="text-sm font-semibold text-emerald-600 mb-1">{stat.label}</div>
                   <div className="text-xs text-gray-500">{stat.description}</div>
                 </div>
               );
