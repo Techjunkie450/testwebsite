@@ -40,7 +40,7 @@ const Contact = () => {
       icon: MapPin,
       title: 'Visit Us',
       details: '123 Tech Street',
-      subDetails: 'Silicon Valley, CA 94000'
+      subDetails: Rajsamand Raj.,
     },
     {
       icon: Clock,
