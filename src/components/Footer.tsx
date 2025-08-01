@@ -1,140 +1,121 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { 
+  Code, 
+  Smartphone, 
+  Cloud, 
+  Settings, 
+  Network, 
+  Shield, 
+  Server, 
+  Building 
+} from 'lucide-react';
 
-const Footer = () => {
-  const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
+const Services = () => {
   const services = [
-    'Web Development',
-    'Mobile Apps',
-    'Cloud Services',
-    'DevOps',
-    'Networking',
-    'Security',
-    'Server Management',
-    'IT Infrastructure'
-  ];
-
-  const socialLinks = [
-    { icon: Github, href: '#', name: 'GitHub' },
-    { icon: Linkedin, href: '#', name: 'LinkedIn' },
-    { icon: Twitter, href: '#', name: 'Twitter' },
-  ];
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    {
+      icon: Code,
+      title: 'Web Design & Development',
+      description: 'Custom websites and web applications built with modern technologies, responsive design, and optimized for performance and user experience.',
+      features: ['Responsive Design', 'Custom Development', 'E-commerce Solutions', 'CMS Integration']
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android, delivering seamless user experiences across all devices.',
+      features: ['iOS Development', 'Android Development', 'Cross-platform', 'App Store Optimization']
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Services',
+      description: 'Comprehensive cloud solutions including migration, deployment, and management across AWS, Azure, and Google Cloud platforms.',
+      features: ['Cloud Migration', 'Infrastructure Setup', 'Cost Optimization', 'Multi-Cloud Support']
+    },
+    {
+      icon: Settings,
+      title: 'DevOps',
+      description: 'Streamline your development and deployment processes with CI/CD pipelines, automation, and infrastructure as code.',
+      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Automation']
+    },
+    {
+      icon: Network,
+      title: 'Networking',
+      description: 'Design, implement, and maintain robust network infrastructures that ensure reliable connectivity and optimal performance.',
+      features: ['Network Design', 'Implementation', 'Troubleshooting', 'Performance Optimization']
+    },
+    {
+      icon: Shield,
+      title: 'Firewall & Security',
+      description: 'Comprehensive cybersecurity solutions to protect your business from threats with advanced firewall configurations and security protocols.',
+      features: ['Firewall Configuration', 'Threat Detection', 'Security Audits', 'Compliance']
+    },
+    {
+      icon: Server,
+      title: 'Server Management',
+      description: 'Professional server administration, monitoring, and maintenance services to ensure maximum uptime and optimal performance.',
+      features: ['Server Setup', '24/7 Monitoring', 'Maintenance', 'Performance Tuning']
+    },
+    {
+      icon: Building,
+      title: 'IT Infrastructure Solutions',
+      description: 'End-to-end IT infrastructure planning, implementation, and support tailored to your business needs and growth objectives.',
+      features: ['Infrastructure Planning', 'Hardware Setup', 'System Integration', 'Scalability Planning']
     }
-  };
+  ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Infrarise Technologies
-            </h3>
-            <p className="text-gray-300 leading-relaxed">
-              Empowering businesses with innovative IT solutions and cutting-edge technology services for the digital age.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => {
-                const IconComponent = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-110"
-                    aria-label={social.name}
-                  >
-                    <IconComponent size={20} />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300"
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Our Services</h4>
-            <ul className="space-y-2">
-              {services.map((service, index) => (
-                <li key={index} className="text-gray-300 text-sm">
-                  {service}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Contact Info</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="text-purple-400 flex-shrink-0" size={18} />
-                <span className="text-gray-300 text-sm">info@infrarise.tech</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="text-purple-400 flex-shrink-0" size={18} />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="text-purple-400 flex-shrink-0 mt-1" size={18} />
-                <span className="text-gray-300 text-sm">
-                  123 Technology Drive<br />
-                  Silicon Valley, CA 94000
-                </span>
-              </div>
-            </div>
-          </div>
+    <section id="services" className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-orange-600">Services</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We provide comprehensive IT solutions tailored to meet your business needs and drive digital transformation.
+          </p>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2025 Infrarise Technologies. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-300">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-300">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-300">
-                Cookie Policy
-              </a>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <div
+                key={index}
+                className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-emerald-200 hover:-translate-y-2 hover:shadow-emerald-500/10"
+              >
+                <div className="mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <IconComponent className="text-white" size={24} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                </div>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-blue-600 to-slate-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-slate-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 transform hover:scale-105">
+            Get Custom Quote
+          </button>
         </div>
       </div>
-    </footer>
+    </section>
   );
 };
 
-export default Footer;
+export default Services;
