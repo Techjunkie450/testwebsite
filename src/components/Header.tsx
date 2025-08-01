@@ -45,18 +45,18 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-2xl shadow-2xl border-b border-emerald-100' : 'bg-gradient-to-r from-emerald-900/30 to-orange-900/30 backdrop-blur-xl'
+      isScrolled ? 'bg-white/95 backdrop-blur-2xl shadow-2xl border-b border-blue-100' : 'bg-gradient-to-r from-blue-900/30 to-slate-900/30 backdrop-blur-xl'
     }`}>
       {/* Data reflection overlay */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-2 left-10 text-emerald-400 font-mono text-xs animate-pulse">
+          <div className="absolute top-2 left-10 text-blue-400 font-mono text-xs animate-pulse">
             {Array.from({length: 20}, (_, i) => Math.random() > 0.5 ? '1' : '0').join('')}
           </div>
-          <div className="absolute top-4 right-20 text-orange-400 font-mono text-xs animate-pulse delay-500">
+          <div className="absolute top-4 right-20 text-slate-400 font-mono text-xs animate-pulse delay-500">
             {Array.from({length: 15}, (_, i) => Math.random() > 0.5 ? '1' : '0').join('')}
           </div>
-          <div className="absolute bottom-2 left-1/3 text-emerald-300 font-mono text-xs animate-pulse delay-1000">
+          <div className="absolute bottom-2 left-1/3 text-blue-300 font-mono text-xs animate-pulse delay-1000">
             {Array.from({length: 18}, (_, i) => Math.random() > 0.5 ? '1' : '0').join('')}
           </div>
         </div>
@@ -67,13 +67,13 @@ const Header = () => {
           <div className="flex-shrink-0">
             <div className="flex items-center space-x-4">
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                isScrolled ? 'bg-gradient-to-r from-emerald-600 to-orange-600 shadow-lg' : 'bg-gradient-to-r from-emerald-500 to-orange-500 shadow-emerald-500/50'
+                isScrolled ? 'bg-gradient-to-r from-blue-600 to-slate-600 shadow-lg' : 'bg-gradient-to-r from-blue-500 to-slate-500 shadow-blue-500/50'
               }`}>
                 <Zap className="text-white" size={24} />
               </div>
               <div>
                 <h1 className={`text-2xl font-bold transition-colors duration-300 ${
-                  isScrolled ? 'text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-orange-600' : 'text-white'
+                  isScrolled ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-600' : 'text-white'
                 }`}>
                   Infrarise Technologies
                 </h1>
@@ -86,7 +86,7 @@ const Header = () => {
                       <div 
                         key={index} 
                         className={`text-xs font-medium h-4 flex items-center ${
-                          isScrolled ? 'text-emerald-600' : 'text-emerald-300'
+                          isScrolled ? 'text-blue-600' : 'text-blue-300'
                         }`}
                       >
                         {slide}
@@ -106,8 +106,8 @@ const Header = () => {
                   onClick={() => scrollToSection(item.href)}
                   className={`group px-5 py-3 text-sm font-medium rounded-xl transition-all duration-300 flex items-center space-x-1 ${
                     isScrolled 
-                      ? 'text-gray-700 hover:text-emerald-600 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-orange-50 hover:shadow-md' 
-                      : 'text-white hover:text-emerald-300 hover:bg-white/15 hover:backdrop-blur-md'
+                      ? 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-slate-50 hover:shadow-md' 
+                      : 'text-white hover:text-blue-300 hover:bg-white/15 hover:backdrop-blur-md'
                   }`}
                 >
                   <span>{item.name}</span>
@@ -122,7 +122,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-3 rounded-xl transition-all duration-300 ${
                 isScrolled 
-                  ? 'text-gray-700 hover:bg-emerald-50' 
+                  ? 'text-gray-700 hover:bg-blue-50' 
                   : 'text-white hover:bg-white/15'
               }`}
             >
@@ -134,13 +134,13 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-2xl shadow-2xl border-b border-emerald-100">
+        <div className="md:hidden bg-white/95 backdrop-blur-2xl shadow-2xl border-b border-blue-100">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-5 py-4 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-orange-50 rounded-xl transition-all duration-300"
+                className="block w-full text-left px-5 py-4 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-slate-50 rounded-xl transition-all duration-300"
               >
                 {item.name}
               </button>
