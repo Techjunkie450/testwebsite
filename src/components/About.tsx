@@ -1,125 +1,122 @@
 import React from 'react';
-import { 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Settings, 
-  Network, 
-  Shield, 
-  Server, 
-  Building 
-} from 'lucide-react';
+import { Users, Award, Target, Zap, CheckCircle, TrendingUp } from 'lucide-react';
 
-const Services = () => {
-  const services = [
+const About = () => {
+  const stats = [
+    { number: '100+', label: 'Projects Completed', icon: Award },
+    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '5+', label: 'Years Experience', icon: TrendingUp },
+    { number: '24/7', label: 'Support Available', icon: Zap }
+  ];
+
+  const values = [
     {
-      icon: Code,
-      title: 'Web Design & Development',
-      description: 'Custom websites and web applications built with modern technologies, responsive design, and optimized for performance and user experience.',
-      features: ['Responsive Design', 'Custom Development', 'E-commerce Solutions', 'CMS Integration']
+      icon: Target,
+      title: 'Innovation First',
+      description: 'We leverage cutting-edge technologies to deliver solutions that drive your business forward.'
     },
     {
-      icon: Smartphone,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android, delivering seamless user experiences across all devices.',
-      features: ['iOS Development', 'Android Development', 'Cross-platform', 'App Store Optimization']
+      icon: CheckCircle,
+      title: 'Quality Assurance',
+      description: 'Every project undergoes rigorous testing to ensure reliability and optimal performance.'
     },
     {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Comprehensive cloud solutions including migration, deployment, and management across AWS, Azure, and Google Cloud platforms.',
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Cost Optimization', 'Multi-Cloud Support']
-    },
-    {
-      icon: Settings,
-      title: 'DevOps',
-      description: 'Streamline your development and deployment processes with CI/CD pipelines, automation, and infrastructure as code.',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Automation']
-    },
-    {
-      icon: Network,
-      title: 'Networking',
-      description: 'Design, implement, and maintain robust network infrastructures that ensure reliable connectivity and optimal performance.',
-      features: ['Network Design', 'Implementation', 'Troubleshooting', 'Performance Optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Firewall & Security',
-      description: 'Comprehensive cybersecurity solutions to protect your business from threats with advanced firewall configurations and security protocols.',
-      features: ['Firewall Configuration', 'Threat Detection', 'Security Audits', 'Compliance']
-    },
-    {
-      icon: Server,
-      title: 'Server Management',
-      description: 'Professional server administration, monitoring, and maintenance services to ensure maximum uptime and optimal performance.',
-      features: ['Server Setup', '24/7 Monitoring', 'Maintenance', 'Performance Tuning']
-    },
-    {
-      icon: Building,
-      title: 'IT Infrastructure Solutions',
-      description: 'End-to-end IT infrastructure planning, implementation, and support tailored to your business needs and growth objectives.',
-      features: ['Infrastructure Planning', 'Hardware Setup', 'System Integration', 'Scalability Planning']
+      icon: Users,
+      title: 'Client-Centric',
+      description: 'Your success is our priority. We work closely with you to understand and exceed expectations.'
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-white relative overflow-hidden">
+      {/* Background Data Reflections */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-10 left-10 text-navy-200 font-mono text-xs animate-pulse opacity-20">
+          ABOUT_DATA_STREAM: {Array.from({length: 16}, (_, i) => Math.random() > 0.5 ? '1' : '0').join('')}
+        </div>
+        <div className="absolute bottom-20 right-20 text-slate-300 font-mono text-xs animate-pulse delay-1000 opacity-20">
+          COMPANY_INFO: {Array.from({length: 12}, (_, i) => Math.random() > 0.5 ? '1' : '0').join('')}
+        </div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-navy-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-24 h-24 bg-slate-200 rounded-full blur-2xl opacity-20 animate-pulse delay-700"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-orange-600">Services</span>
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-600">Infrarise Technologies</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We provide comprehensive IT solutions tailored to meet your business needs and drive digital transformation.
+            We are a forward-thinking IT solutions company dedicated to empowering businesses through innovative technology and exceptional service.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+              Transforming Business Through Technology
+            </h3>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              At Infrarise Technologies, we believe that the right technology can transform any business. 
+              Our team of experienced professionals combines deep technical expertise with a passion for 
+              innovation to deliver solutions that not only meet your current needs but also position 
+              you for future growth.
+            </p>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              From web development and mobile applications to cloud infrastructure and cybersecurity, 
+              we provide comprehensive IT services that help businesses thrive in the digital age. 
+              Our commitment to excellence and customer satisfaction has made us a trusted partner 
+              for companies of all sizes.
+            </p>
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-xl flex items-center justify-center">
+                <Zap className="text-white" size={24} />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900">Our Mission</h4>
+                <p className="text-gray-600">Empowering businesses with innovative IT solutions</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-8 border border-blue-100">
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                      <IconComponent className="text-white" size={20} />
+                    </div>
+                    <div className="text-2xl font-bold text-gray-900 mb-1">{stat.number}</div>
+                    <div className="text-sm text-gray-600">{stat.label}</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {values.map((value, index) => {
+            const IconComponent = value.icon;
             return (
               <div
                 key={index}
-                className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-emerald-200 hover:-translate-y-2 hover:shadow-emerald-500/10"
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 hover:-translate-y-1"
               >
-                <div
-                  className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-6 text-center border border-blue-100 hover:border-blue-200 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
-                >
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="text-white" size={24} />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
-                    {service.title}
-                  </h3>
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-xl flex items-center justify-center mb-4">
+                  <IconComponent className="text-white" size={24} />
                 </div>
-                
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </div>
             );
           })}
-        </div>
-
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 transform hover:scale-105">
-            Get Custom Quote
-          </button>
         </div>
       </div>
     </section>
   );
 };
 
-export default Services;
+export default About;
