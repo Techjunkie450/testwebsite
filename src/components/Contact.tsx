@@ -83,6 +83,7 @@ const Services = () => {
                 className="w-full bg-gradient-to-r from-blue-600 to-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-slate-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-blue-500/25"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                </div>
                 <div className="mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="text-white" size={24} />
@@ -102,7 +103,7 @@ const Services = () => {
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
                       {feature}
                     </li>
-                <p className="text-blue-600 font-medium mb-1">{info.info}</p>
+                  ))}
                 </ul>
               </div>
             );
